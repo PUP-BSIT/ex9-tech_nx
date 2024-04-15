@@ -1,0 +1,52 @@
+body {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   font-family: ‘sans-serif, ‘Arial’, ‘Serif’;
+   background: cover;
+   margin: 0;
+}
+h2 {
+   display: grid;
+   text-align: center;
+   font-weight: 700;
+   margin-bottom: 20px;
+  }
+
+.email, .fullname, .age, .subject {
+   border: 1px solid;
+   padding: 10px;
+  }
+
+  .message, .button {
+   border: 1px solid;
+   padding: 10px;
+  }
+
+  .container div {
+   display: grid;
+   border: 1px solid;
+   text-align: center;
+  }
+  
+  @media (min-width: 425px) {
+ .contact {
+ grid-template-areas:
+ "email" 
+ "fullname" 
+ "age" 
+ "subject";
+ }
+ }
+
+ @media (max-width: 425px) {
+   .contact {
+   grid-template-areas:
+ "email" 
+ "fullname" 
+ "age" 
+ "subject";
+   }
+   }
+  
