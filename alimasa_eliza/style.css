@@ -10,38 +10,23 @@
     background: #FFDFDF;
 }
   
-.head {
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-}
-
 hr {
     border-top: 2px solid #FEC7B4;
 }
 
-.heading {
-    text-align: right;
-    position: relative;
-    right: 350px;
-    height: 100px;
-    padding: 100px;
+.heading, .description {
+    text-align: center;
 }
 
-.description {
-    padding: 10px;
-    text-align: right;
-    right: 350px;
-    position: relative;
-    bottom: 170px;
+.image {
+    text-align: center;
+    padding: 20px 0;
 }
 
 .pfp {
-    position: absolute;
-    top: 100px;
-    left: 400px;
-    width: 200px;
+    width: 100px;
     border: 2px solid pink;
+    margin-bottom: 10px;
 }
 
 .content-container {
@@ -55,10 +40,11 @@ hr {
     margin-bottom: 20px;
 }
 
-.info, .files, .testi, .gallery {
-    font-size: 20px;
+.info, .files, .testi, .gallery, .head, .contacts {
+    font-size: 15px;
     background-color: #FFDFDF;
     padding: 10px;
+    text-align: center;
 }
 
 .li {
@@ -67,11 +53,8 @@ hr {
     text-align: left;
 }
 
-.gallery {
-    text-align: center;
-}
-
 .polaroid {
+    justify-content: center;
     text-align: center;
     width: 25%;
     background-color: white;
@@ -84,7 +67,7 @@ hr {
 }
 
 .polaroid img {
-    display: block;
+    min-width: 100px;
     width: 50%;
     margin: 0 auto;
 }
@@ -94,8 +77,7 @@ hr {
     padding: 10px 20px;
 }
 
-.h2 {
-    text-align: center;
+.details {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -117,11 +99,13 @@ hr {
 
 .copy {
     grid-area: copy;
+    text-align: left; 
 }
 
 .send-copy {
     grid-area: send-copy;
     padding: 10px;
+    text-align: left; 
 }
 
 .submit {
@@ -135,7 +119,7 @@ hr {
 }
 
 @media (min-width: 426px) {
-    .info > form {
+    .details > form {
         display: grid;
         grid-template-areas: 
             "email fullname"
