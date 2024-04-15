@@ -1,0 +1,161 @@
+body{
+    background-image: url('https://artprofmedia.s3.amazonaws.com/wp-content/uploads/20210427092358/14_Anya-Chen_White-on-White_Finished.jpg');
+    justify-content: center;
+    text-align: center;
+    list-style-position: inside;
+    padding: 10px;
+    border: 3px dotted white;
+    margin: 50px auto;
+    max-width: 100%;
+}
+
+.main_body{
+    background-color: rgba(226, 214, 214, 0.5);
+    padding: 10px;
+    max-width: 100%;
+}
+
+hr{
+    border-top: 1px dotted white;
+}
+
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+h1{
+    font-style: italic;
+    font-weight: 1000;  
+}
+
+.main_body > h2 {
+    font-family: georgia;
+}
+
+.works, .testimonial{
+    border: 5px solid lightpink;
+    border-radius: 5px;   
+    margin-bottom: 50px;
+}
+
+.gallery {
+    background-color: rgba(232, 175, 175, 0.753);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    
+}
+
+@media (max-width: 426px) {
+    .main_body {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "hobbies works"
+            "testimonial gallery";
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main_body {
+       max-width: 668px;
+       margin: 50px auto;
+    }
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    width: 100%;
+    max-width: 768px;
+    background:  rgba(226, 214, 214, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    grid-gap: 15px;
+}
+
+.contact_form > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background-size: cover;
+    margin: 0;
+    text-align: center;
+}
+
+.contact_header {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    background: transparent;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    background: snow;
+}
+
+.copy {
+    text-align: left;
+}
+
+.message {
+    text-align: left;
+}
+
+textarea {
+    background: snow;
+}
+
+.email {
+    grid-area: email;
+}
+
+.fname {
+    grid-area: fname;
+}
+
+.age {
+    grid-area: age;
+}
+
+.subject {
+    grid-area: subject;
+}
+
+.submit_form {
+    grid-area: submit;
+}
+
+.email, .fname, .age, .subject, .submit_form {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.container > form {
+    display: grid;
+    grid-template-areas: 
+    "email fname"
+    "age subject"
+    "submit submit";
+}
+
+@media (max-width:426px) {
+    .container > form {
+        display: block;
+    } 
+}
