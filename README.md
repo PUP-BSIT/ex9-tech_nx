@@ -2,4 +2,5 @@
 https://tech-nx.netlify.app/
 https://barrantes-sofiaanne.netlify.app/
 https://tayotomikaellaantonette.netlify.app/
+https://alimasaeliza.netlify.app
 
