@@ -29,7 +29,7 @@ h1{
     font-weight: 1000;  
 }
 
-.main_body > h2 {
+.main_body > h2{
     font-family: georgia;
 }
 
@@ -39,17 +39,16 @@ h1{
     margin-bottom: 50px;
 }
 
-.gallery {
+.gallery{
     background-color: rgba(232, 175, 175, 0.753);
 }
 
-img {
+img{
     width: 200px;
-    height: 200px;
-    
+    height: 200px;  
 }
 
-@media (max-width: 426px) {
+@media (max-width: 426px){
     .main_body {
         display: grid;
         grid-template-areas: 
@@ -60,14 +59,14 @@ img {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px){
     .main_body {
        max-width: 668px;
        margin: 50px auto;
     }
 }
 
-.container {
+.container{
     display: grid;
     align-items: center;
     width: 100%;
@@ -78,7 +77,7 @@ img {
     grid-gap: 15px;
 }
 
-.contact_form > form {
+.contact_form > form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +88,7 @@ img {
     text-align: center;
 }
 
-.contact_header {
+.contact_header{
     font-size: 26px;
     font-weight: 600;
     text-align: center;
@@ -97,56 +96,56 @@ img {
     text-align: center;
 }
 
-input {
+input{
     width: 200px;
     height: 25px;
     background: transparent;
 }
 
-button {
+button{
     width: 250px;
     height: 50px;
     background: snow;
 }
 
-.copy {
+.copy{
     text-align: left;
 }
 
-.message {
+.message{
     text-align: left;
 }
 
-textarea {
+textarea{
     background: snow;
 }
 
-.email {
+.email{
     grid-area: email;
 }
 
-.fname {
+.fname{
     grid-area: fname;
 }
 
-.age {
+.age{
     grid-area: age;
 }
 
-.subject {
+.subject{
     grid-area: subject;
 }
 
-.submit_form {
+.submit_form{
     grid-area: submit;
 }
 
-.email, .fname, .age, .subject, .submit_form {
+.email, .fname, .age, .subject, .submit_form{
     border: 1px solid black;
     padding: 15px;
 }
 
-.container > form {
+.container > form{
     display: grid;
     grid-template-areas: 
     "email fname"
@@ -154,7 +153,7 @@ textarea {
     "submit submit";
 }
 
-@media (max-width:426px) {
+@media (max-width:426px){
     .container > form {
         display: block;
     } 
