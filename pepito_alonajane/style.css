@@ -1,8 +1,4 @@
 
-body{
-    margin: 0;
-    padding: 0;
-}
 
 .box{
     background-image: url('https://i.pinimg.com/736x/af/eb/b6/afebb655369668445f242cd4bccc7c42.jpg');
@@ -37,13 +33,13 @@ body{
     display: block;
 }
 
-.container{
+.main_container{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 5px; 
 }
 
-h2{
+.contact_header{
     font-style: italic;
     text-align: center;
     padding: 20px; 
@@ -95,3 +91,62 @@ ol.center{
     display: inline-block; 
     text-align: left; 
 }
+.main-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-size: cover;
+    margin: 0;
+}
+
+.email, .full-name, .subject, .age, .message, .submit{
+    border: 1px solid;
+    padding: 20px;
+}
+
+
+h2{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container{
+    display: grid;
+    width: 80%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #0c0a0a;
+    border-radius: 10px;
+    grid-gap: 10px;   
+    align-items: center;
+}
+
+@media (min-width: 426px){
+    .contact>form {
+        display: grid;
+        grid-template-areas:
+            "email full-name"
+            "subject age"
+            "message message"
+            "submit submit";
+    }
+}
+
+@media (max-width: 426px){
+    .contact>form{
+        display: grid;
+        grid-template-areas:
+            "email"
+            "full-name"
+            "subject"
+            "age"
+            "message"
+            "submit";
+    }
+}
+ 

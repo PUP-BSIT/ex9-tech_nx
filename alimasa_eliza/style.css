@@ -47,7 +47,7 @@ hr {
     text-align: center;
 }
 
-.li {
+.info-li, .files-li, .testi-li {
     padding: 20px;
     display: inline-block;
     text-align: left;
@@ -56,12 +56,10 @@ hr {
 .polaroid {
     justify-content: center;
     text-align: center;
-    width: 25%;
+    width: 30%;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 8px 10px 10px #FFDFDF;
     margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
     display: inline-block;
     vertical-align: top; 
 }
@@ -113,6 +111,7 @@ hr {
     padding: 10px;
     text-align: center;    
 }
+
 .email, .fullname, .subject, .age, .copy {
     border: 1px solid;
     padding: 20px;
@@ -127,4 +126,4 @@ hr {
             "copy copy"
             "submit submit";
      }
-}    
+} 
