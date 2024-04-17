@@ -47,7 +47,7 @@ hr {
     text-align: center;
 }
 
-.li {
+.info-li, .files-li, .testi-li {
     padding: 20px;
     display: inline-block;
     text-align: left;
@@ -113,6 +113,7 @@ hr {
     padding: 10px;
     text-align: center;    
 }
+
 .email, .fullname, .subject, .age, .copy {
     border: 1px solid;
     padding: 20px;
