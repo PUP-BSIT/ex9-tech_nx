@@ -1,159 +1,131 @@
-body{
-    background-image: url('https://artprofmedia.s3.amazonaws.com/wp-content/uploads/20210427092358/14_Anya-Chen_White-on-White_Finished.jpg');
+body {
+    background-color: #AD88C6;
+    display: flex;
     justify-content: center;
     text-align: center;
     list-style-position: inside;
     padding: 10px;
-    border: 3px dotted white;
-    margin: 50px auto;
+    margin: 0;
+    min-height: 100vh;
     max-width: 100%;
+    font-family: sans-serif;
+    font-size: medium;
 }
 
-.main_body{
-    background-color: rgba(226, 214, 214, 0.5);
+.main-body {
+    background-color: #E1AFD1;
     padding: 10px;
     max-width: 100%;
+    border: 3px dotted white;
 }
 
-hr{
-    border-top: 1px dotted white;
+hr {
+    border-top: 1px dotted #FFE6E6;
 }
 
-a:link{
+a:link {
     color: black;
     text-decoration: none;
 }
 
-h1{
+h1 {
     font-style: italic;
     font-weight: 1000;  
 }
 
-.main_body > h2{
+.main-body > h2 {
     font-family: georgia;
 }
 
 .works, .testimonial{
-    border: 5px solid lightpink;
+    border: 5px solid #FFE6E6;
     border-radius: 5px;   
     margin-bottom: 50px;
 }
 
-.gallery{
-    background-color: rgba(232, 175, 175, 0.753);
+.gallery {
+    background-color: #FFE6E6;
 }
 
-img{
+img {
     width: 200px;
     height: 200px;  
 }
 
-@media (max-width: 426px){
-    .main_body {
-        display: grid;
-        grid-template-areas: 
-            "header header"
-            "hobbies works"
-            "testimonial gallery";
-        gap: 20px;
-    }
-}
-
-@media (min-width: 768px){
-    .main_body {
-       max-width: 668px;
-       margin: 50px auto;
-    }
-}
-
-.container{
-    display: grid;
-    align-items: center;
-    width: 100%;
-    max-width: 768px;
-    background:  rgba(226, 214, 214, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    grid-gap: 15px;
-}
-
-.contact_form > form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: sans-serif;
-    background-size: cover;
-    margin: 0;
-    text-align: center;
-}
-
-.contact_header{
+.contact-header {
     font-size: 26px;
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
-    text-align: center;
 }
 
-input{
+input {
     width: 200px;
     height: 25px;
     background: transparent;
 }
 
-button{
+button {
+    font-size: large;
+    font-weight: bold;
     width: 250px;
     height: 50px;
     background: snow;
 }
 
-.copy{
+.copy {
     text-align: left;
 }
 
-.message{
+.message {
     text-align: left;
 }
 
-textarea{
+textarea {
     background: snow;
 }
 
-.email{
+.email {
     grid-area: email;
 }
 
-.fname{
+.fname {
     grid-area: fname;
 }
 
-.age{
+.age {
     grid-area: age;
 }
 
-.subject{
+.subject {
     grid-area: subject;
 }
 
-.submit_form{
+.submit-form {
     grid-area: submit;
 }
 
-.email, .fname, .age, .subject, .submit_form{
+.email, .fname, .age, .subject, .submit-form {
     border: 1px solid black;
     padding: 15px;
 }
 
-.container > form{
+.container > form {
+    font-size: medium;
+    font-weight: bold;
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "email fname"
     "age subject"
     "submit submit";
 }
 
-@media (max-width:426px){
+@media (max-width: 426px) {
+    .main-body {
+        display: block;
+    }
+
     .container > form {
         display: block;
     } 
