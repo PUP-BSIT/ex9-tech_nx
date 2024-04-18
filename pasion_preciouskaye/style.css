@@ -1,17 +1,31 @@
 body {
-  background-image: url("blue.jpg");
+  background-image: url("butterfly.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   list-style-position: inside;
   display: grid;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: serif;
-  margin: 0;
+  margin: 1px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
 }
 
 .name {
   text-align: center;
+  background-color: rgba(44, 93, 242, 0.941);
+  width: 600px;
+  padding: 10px;
 }
+
 
 h2 {
   font-style: Italic;
@@ -19,14 +33,27 @@ h2 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
+  background-color: rgba(0, 0, 255, 0.427);
 }
 
-div.works {
-  border: 10px solid rgb(51, 189, 227);
+
+.works,
+.hobbies,
+.comment {
+  border: 10px solid rgba(51, 113, 227, 0.686);
+  background-color: rgba(0, 174, 255, 0.586);
+  width: 500px;
+  gap: 5px;
+  padding: 15px;
 }
 
-div.images {
+.images {
   background: rgb(13, 168, 220);
+  justify-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 15px;
 }
 
 img {
@@ -42,7 +69,8 @@ img {
   padding: 10px;
 }
 
-.sendcopy, .message,
+.sendcopy,
+.message,
 .submit {
   border: 1px solid;
   padding: 10px;
@@ -52,51 +80,33 @@ img {
   display: grid;
   border: 1px solid;
   text-align: center;
-}
-
-.email {
-   grid-area: email;
-}
-
-.fullname {
-   grid-area: fullname;
-}
-
-.age {
-   grid-area: age;
-}
-
-.subject {
-   grid-area: subject;
+  background-color: aquamarine;
+  margin: 1px;
 }
 
 .sendcopy {
-   grid-area: sendcopy;
+  grid-area: sendcopy;
 }
 
 .message {
-   grid-area: message;
+  grid-area: message;
 }
 
 .submit {
-   grid-area: submit;
+  grid-area: submit;
 }
-
 
 @media (min-width: 425px) {
   .contact {
-   display: grid;
-    grid-template-areas:
-      "email fullname"
-      "age subject"
-      "sendcopy message"
-      "submit submit";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
 @media (max-width: 425px) {
   .contact {
-   display: flex;
+    display: flex;
     grid-template-areas: column;
   }
 }
