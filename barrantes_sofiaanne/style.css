@@ -5,27 +5,21 @@ body {
 }
 
 .split-right {
-    height: 100vh; 
+    height: 100%;
     display: flex; 
     background-color: #ffd1dc; 
-    display: flex;
     align-items: center; 
     padding: 20px;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
 
 .slide { 
-    max-width: 600px;
+    max-width: 100%;
     margin-bottom: 20px; 
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 1; 
     padding: 20px;
     background-color: white;
     border: 10px solid white;
-    overflow-y: auto;
-    overflow-x: auto;
-    flex-direction: row;
     box-sizing: border-box; 
 }
 
@@ -39,7 +33,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: relative;
     max-width: 800px;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 50px;
@@ -48,9 +41,8 @@ body {
 
 .split-left {
     height: 100vh; 
-    display: flex; 
     flex: 1;
-    background-color: #f0f0f0;
+    display: flex; 
     justify-content: center;
     background-image: url("https://f8n-production-collection-assets.imgix.net/0x9937D9A7205238834F6aE86D5CbbE60a887cFb6F/1/nft.png?auto=format%2Ccompress&q=70&h=1200&w=1200");
     background-size: cover;
@@ -82,13 +74,12 @@ a:hover {
     padding: 10px; 
     border-radius: 10px; 
     margin-bottom: 20px; 
-    box-sizing: border-box; 
-    width: calc(33.33% - 40px);
+    width: 25%;
 }
 
-.Gallery {
+.gallery {
     text-align: center; 
-    background-color:#ffd1dc ;
+    background-color: white ;
 }
 
 .gallery-item {
@@ -134,52 +125,38 @@ a:hover {
 }
 
 .email, .Name, .subject, .message, .age, .copy {
-    border:1px solid;
+    border:3px solid white;
     padding: 20px;
     text-align:start;
 }
 
-.MIH{
-    grid-area: mih;
-}
-
-.testimonials{
-    grid-area: testimonial;
-}
-
-.works{
-    grid-area: work;
-}
-
 .contact {
     display: flex;
-    flex-direction: column; /* Add this line to stack elements vertically */
-    justify-content: center; /* Center content horizontally and vertically */
+    flex-direction: column; 
+    justify-content: center; 
     align-items: center; 
-    border: 2px solid #ffd1dc; 
     padding: 10px; 
-    border-radius: 10px; 
-    margin-bottom: 20px; 
+    border-color: white;
     box-sizing: border-box; 
     width: 100%; 
-    background-color: #fff;
-    margin-top: 20px; /* Add top margin to create space */
+    background-color: #ffd1dc;
+    margin-top: 20px; 
 }
 
-@media (min-width: 426px) {
-.contact>form {
-    display: grid;
-    grid-template-areas: 
-        "email Name"
-        "subject age"
-        "copy copy"
-        "message message"
-        "submit submit";
+@media (min-width: 427px) {
+    .contact>form {
+        display: grid;
+        grid-template-areas: 
+            "email Name"
+            "subject age"
+            "copy copy"
+            "message message"
+            "submit submit";
     }
 }
 
 @media (max-width: 426px) {
-    .contact>form {
+    .contact > form {
         display: grid;
         grid-template-areas: 
             "email"
@@ -189,68 +166,12 @@ a:hover {
             "copy"
             "message"
             "submit";
-        }
     }
-    .testimonials {
-        grid-area: testimonial;
-        border: 2px solid #ffd1dc;
-        padding: 20px; /* Adjust padding to create space around content */
-        border-radius: 10px;
-        margin-bottom: 20px;
-        box-sizing: border-box;
-        overflow-y: auto; /* Add scrollbar if content exceeds height */
-        background-color: #fff;
+    .split-right {
         display: flex;
-        flex-direction: column; /* Ensure content stacks vertically */
-        height: 200px; /* Set a fixed height for the testimonial box */
+        flex-direction: column;
     }
-    
-    .testimonials h2 {
-        margin-top: 0;
+    .section-container {
+        width: auto;
     }
-    
-    .testimonials ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .testimonials li {
-        padding: 10px 0;
-    }
-    
-    .testimonials li:not(:last-child) {
-        border-bottom: 1px solid #ddd; /* Add border between testimonials */
-    }
-    
-    .testimonials li p {
-        margin: 0; /* Remove default paragraph margin */
-        overflow: hidden; /* Hide overflowing content */
-        text-overflow: ellipsis; /* Display ellipsis (...) for truncated text */
-        white-space: nowrap; /* Prevent text wrapping */
-    }
-    
-    @media (max-width: 426px) {
-        .split-right {
-            display: grid;
-            grid-template-areas:
-                "testimonial"
-                "works"
-                "mih";
-            align-items: center; 
-            justify-content: center;
-            width: 100%;
-        }
-    
-        .works, .MIH,.testimonials {
-            width: 300px;
-            max-width: 200px;
-            overflow-y: auto; 
-        }
-    
-        .contact {
-            margin-top: 800px; 
-            margin-bottom: 100px; 
-        }
-    }
-    
+}
