@@ -1,71 +1,90 @@
-body{
-   background-image: url('bluewallpaper.jpg');
-   list-style-position: inside;
+body {
+  background-image: url("blue.jpg");
+  list-style-position: inside;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: serif;
+  margin: 0;
+}
+
+.name {
+  text-align: center;
+}
+
+h2 {
+  font-style: Italic;
+  display: grid;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+div.Works {
+  border: 10px solid rgb(0, 105, 175);
+}
+
+div.images {
+  background: rgb(90, 158, 230);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.email,
+.fullname,
+.age,
+.subject {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.sendcopy, .message,
+.submit {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.container div {
+  display: grid;
+  border: 1px solid;
+  text-align: center;
+}
+
+.email {
+   grid-area: email-1;
+}
+
+.fullname {
+   grid-area: fullname-2;
+}
+
+.age {
+   grid-area: age-3;
+}
+
+.subject {
+   grid-area: subject-4;
+}
+
+
+@media (min-width: 425px) {
+  .contact {
    display: grid;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-   font-family: serif;
-   margin: 0;
+    grid-template-areas:
+      "email-1 fullname-2"
+      "age-3  subject-4"
+      "sendcopy message"
+      "submit";
+  }
 }
 
-h2{
-   font-style: Italic;
-   display: grid;
-   text-align: center;
-   font-weight: 700;
-   margin-bottom: 20px;
+@media (max-width: 425px) {
+  .contact {
+   display: flex;
+    grid-template-areas: column;
+  }
 }
-
-div.Works{ 
-   border: 10px solid rgb(0, 105, 175);
-}
- 
-div.images{
-   background: rgb(90, 158, 230);
-}
-
-img{
-   width: 200px;
-   height: 200px;
-}
-
-
-.email, .fullname, .age, .subject {
-   border: 1px solid;
-   padding: 10px;
-    }
-
-  .message, .button {
-   border: 1px solid;
-   padding: 10px;
-      }
-
-  .container div {
-   display: grid;
-   border: 1px solid;
-   text-align: center;
-        }
-  
-  @media (min-width: 425px) {
- .contact {
- grid-template-areas:
- "email fullname" 
- "age  subject"
- "message"
- "submit";
-          }
-           }
-
- @media (max-width: 425px) {
-   .contact {
- grid-template-areas:
- "email" 
- "fullname" 
- "age" 
- "subject"
- "message"
- "submit";
-             }
-                }
-  
