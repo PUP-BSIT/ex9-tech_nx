@@ -21,12 +21,12 @@ h2 {
   margin-bottom: 20px;
 }
 
-div.Works {
-  border: 10px solid rgb(0, 105, 175);
+div.works {
+  border: 10px solid rgb(51, 189, 227);
 }
 
 div.images {
-  background: rgb(90, 158, 230);
+  background: rgb(13, 168, 220);
 }
 
 img {
@@ -55,19 +55,31 @@ img {
 }
 
 .email {
-   grid-area: email-1;
+   grid-area: email;
 }
 
 .fullname {
-   grid-area: fullname-2;
+   grid-area: fullname;
 }
 
 .age {
-   grid-area: age-3;
+   grid-area: age;
 }
 
 .subject {
-   grid-area: subject-4;
+   grid-area: subject;
+}
+
+.sendcopy {
+   grid-area: sendcopy;
+}
+
+.message {
+   grid-area: message;
+}
+
+.submit {
+   grid-area: submit;
 }
 
 
@@ -75,10 +87,10 @@ img {
   .contact {
    display: grid;
     grid-template-areas:
-      "email-1 fullname-2"
-      "age-3  subject-4"
+      "email fullname"
+      "age subject"
       "sendcopy message"
-      "submit";
+      "submit submit";
   }
 }
 
